@@ -1,0 +1,44 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $font-size;
+
+}
+
+header,
+main,
+footer {
+    border: 1px solid $tan;
+    @include font-size(1.6);
+
+
+    @include tablet {
+        @include font-size(1.8)
+    }
+}
+
+.section {
+    display: block;
+    margin: .8rem;
+
+    @include desktop {
+        display: flex;
+        max-width: 1280px;
+        margin: 0 auto;
+        min-height: 30rem;
+    }
+}
+.columns-2{
+    width: 100%;
+    @include desktop {
+        width: calc((100% / 2) - .8rem);
+        margin: .8rem;
+    }
+    
+}
+
+footer {
+    background-color: $primaryRed;
+    min-height: 30rem;
+}
+
+

@@ -1,0 +1,49 @@
+.flickity-button {
+    background-color: transparent;
+}
+.flickety-prev-next-button {
+    width: 10rem;;
+    height: 10rem;
+}
+
+.flickity-button-icon {
+  fill:$white;
+}
+
+.flickity-button:disabled {
+    display:none;
+}
+
+.flickity-page-dots {
+  //bottom: -2.2rem;
+  display: flex;
+  justify-content: center;
+
+  .dot{
+    height: .4rem;
+    width: 4rem;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+.carousel {
+  margin-top: .8rem;
+    @include desktop {
+      overflow: hidden;
+    }
+    img {
+        width: 100%;
+        
+        
+        margin-right: 10px;
+        filter: grayscale(100%);
+        @include desktop {
+          height: 40rem;
+          
+        }
+        &.is-selected{
+            filter: grayscale(0);
+            transition: filter .5s linear;
+        }
+    }
+}
