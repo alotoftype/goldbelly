@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-//import {withFormik } from 'formik';
-//import Yup from 'yup';
-import Layout from './layout';
-import { NAME_START_CHAR } from 'xmlchars/xml/1.0/ed5';
+import Gcform from './gc-form';
+import GcConfirm from './confirm';
+import Success from './success';
 
 export default class GiftCard extends Component {
 
         state = {
-            step:1,
+            step:2,
             item: {
                 id: 'gift-card',
                 amount: '',
@@ -19,14 +18,43 @@ export default class GiftCard extends Component {
 
             },
             errors: {},
-            cart: []
+            cart: [{
+                id: 'gift-card',
+                amount: '$10.00',
+                name:'Sample',
+                recepientsEmail: 'Sample@sample.com',
+                rEmail:'Sample@sample.com',
+                senderEmail: 'Sender@sender.com',
+                sEmail:'Sender@sender.com'
+            }]
           }
-
+          nextStep = () => {
+            const { step } = this.state;
+            this.setState({
+              step: step + 1
+            });
+          };
+          // go back to previous step
+          prevStep = () => {
+            const { step } = this.state;
+            this.setState({
+              step: step - 1
+            });
+          };
+          startOver = () => {
+              this.setState({
+                  step: 1
+              }) 
+          }
           handleMatch = (name,  {item} = this.state) => event => {
               event.preventDefault()
               const { recepientsEmail, rEmail } = this.state.item
               const match = recepientsEmail === rEmail
-              match ? console.log('It Matches') : console.log('It doesn\'t match')
+              if(match){
+                  console.log('a match')
+              }else {
+                  console.log('not a match')
+              }
           }
           handleItem = (name, {item} = this.state) => event => {
               event.preventDefault()
@@ -35,77 +63,49 @@ export default class GiftCard extends Component {
               }})
               console.log(this.state, item)
           }
-          onSubmit = ({item, cart} = this.state) => event => {
+          onSubmit = ({item, cart, step} = this.state) => event => {
               event.preventDefault();
               this.handleMatch();
               this.setState({
                   cart: [...cart, item]
               })
-              console.log(item, cart)
+              this.nextStep();
+              console.log(item, cart, step)
           }
     
     
     render() {
-        const { item } = this.state 
-        const amounts = ['$25','$50','$75','$100','$200','other']
-        let input
-        if(item.amount === 'other'){
-            input = <div className="other-amount">
-            <input type="text" min="1" max="500" placeholder="enter other amount"
-                onChange={this.handleItem("Other Amount")}
-            required pattern="^[0-9]*$"/>
-        </div>
-        }
-        return (
-            <form>
-            <div className="heading">
-                Purchase a Digital GiftCard
-            </div>
-                <select name="amount" onChange={this.handleItem('amount')}>
-                <option value="choose an amount" disabled>Choose an amount</option>
-                {amounts.map((amount, index) => (
-                        <option key={index} value={amount}>{amount}</option>
-                    ))}
-                </select>
-                {input}
-                
-                <div className="form name">
-                <label htmlFor="name">Name</label>
-                <input name="name" type="text" placeholder="Enter Name" value={this.state.item.name} onChange={this.handleItem('name')} />
-                </div>
-                <div className="form recipient">
-                <div className="input">
-                <label htmlFor="recipientsEmail">Receipients</label>
-                <input type="email" name="recepientsEmail" placeholder="Enter Receipients email" onChange={this.handleMatch("recepientsEmail")}
-                ref={node => this.email = node}
+        const { item, errors, cart, step}= this.state
+
+        switch(step) {
+            case 1: 
+            return (
+                <Gcform 
+                item={item}
+                errors={errors}
+                handleItem={this.handleItem}
+                onSubmit={this.onSubmit}
                 />
-                </div>
-                <div className="input">
-                <input type="email" name="rEmail" placeholder="Re-enter Receipients email"
-                    onChange={this.handleItem("rEmail")}
-                    ref={node => this.rEmail = node} />
-                </div>
-                </div>
-                
-                
-                <div className="form sender">
-                <div className="input">
-                <label htmlFor="senderEmail">Sender</label>
-                <input name="senderEmail" type="email" placeholder="Enter Senders email"/>
-                </div>
-                <div className="input">
-                <input type="sEmail" placeholder="Re-enter Senders email"/>
-                </div>
-                
-                </div>
-                <div className="form button">
-                    <input type="button" value="submit" onClick={this.onSubmit()} />
-                </div>
-                </form>
-        )
+            )
+            case 2: 
+                return <GcConfirm
+                    cart={cart}
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                />
+
+            case 3:
+                return <Success 
+                startOver={this.startOver} />
+
+            default: 
+            return  (<Gcform 
+            item={item}
+            errors={errors}
+            handleItem={this.handleItem}
+            onSubmit={this.onSubmit}
+            />)
+        }
+        
     }
 }
-
-// const FormikApp = withFormik({
-
-// })(GiftCard)

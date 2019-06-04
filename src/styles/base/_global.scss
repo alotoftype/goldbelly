@@ -25,6 +25,11 @@ footer {
         @include font-size(1.8)
     }
 }
+ul {
+    li {
+        list-style-type: none;
+    }
+}
 
 .section {
     display: block;
