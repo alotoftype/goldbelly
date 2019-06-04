@@ -2,7 +2,15 @@ import React from 'react'
 
 const GcConfirm = (props) => {
     const {cart, prevStep, nextStep} = props
-    const cartItem = Object.entries(cart[0])
+    let cartItem
+    const lastItem = cart.length-1;
+    
+    if(cart[lastItem].amount !== "" ){
+         cartItem = Object.entries(cart[lastItem]);
+    }else {
+          cartItem = Object.entries(cart[0])
+    }
+
 
  
     return (

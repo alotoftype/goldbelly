@@ -47,10 +47,14 @@ const Gcform = (props) => {
                 <div className="form sender">
                 <div className="input">
                 <label htmlFor="senderEmail">Sender</label>
-                <input name="senderEmail" type="email" placeholder="Enter Senders email"/>
+                <input name="senderEmail" type="email" placeholder="Enter Senders email"
+                     onChange={handleItem("senderEmail")}
+                />
                 </div>
                 <div className="input">
-                <input type="sEmail" placeholder="Re-enter Senders email"/>
+                <input type="sEmail" placeholder="Re-enter Senders email"
+                     onChange={handleItem("sEmail")}
+                />
                 </div>
                 
                 </div>
