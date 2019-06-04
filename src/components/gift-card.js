@@ -70,7 +70,7 @@ export default class GiftCard extends Component {
                   cart: [...cart, item]
               })
               this.nextStep();
-              console.log(item, cart, step)
+
           }
     
     

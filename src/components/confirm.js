@@ -1,7 +1,6 @@
 import React from 'react'
 
 const GcConfirm = (props) => {
-    console.log(props)
     const {cart, prevStep, nextStep} = props
     const cartItem = Object.entries(cart[0])
 

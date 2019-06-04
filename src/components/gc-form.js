@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gcform = (props) => {
     const { item, handleItem, onSubmit} = props
-    console.log(props)
+
     let input
     const amounts = ['$25','$50','$75','$100','$200','other']
 
