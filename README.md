@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Test Project - Gift Card Purchasing Experience
 
-## Available Scripts
+## Due Date
+~5/31/19
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+A customer lands on Goldbelly with the intent to purchase an e-gift card.
+The user will need to provide a "from" name and email along with a "to" name and email. They will also need to select a value of the gift card which can be $25, $50, $100, $200 or they can enter their own value (up to $500).
+This could all be a single page, or it could be done with multi-step modals. The flow is up to you for what you feel works best or is the most interesting.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Technology
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Implement in React
+- Try to match the site style of [Goldbelly.com](https://goldbelly.com) as much as possible, however please use your own class names and markup.
 
-### `npm test`
+### Additional Information
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Our current markup and class names we have for this experience is out of date anyways!
+They will specifically be looking at the class naming conventions, CSS structure, and code quality. This code from this project will be utilized in the next meeting so they have some common code ground to talk through :)
 
-### `npm run build`
+### Discovered Styles
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Colors
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+===
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Primary Red: #ff4d4f
+- Primary Blue: #1baad0
+- Primary Yellow: #ffae36
+- Primary Grey: #5e5e5e
+- Blue: #428bca
+- Teal: #12a2b9
+- Grey: #333333
+- Tan: #f2eee9
+- White: #ffffff
+- Black: #000000
 
-### `npm run eject`
+Body Copy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+===
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Font Family: Cabin, Helvetica, Arial Sans-serif
+- Font Size: 16px;
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Heading Copy
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+===
 
-## Learn More
+Font-Family: Futura, Trebuchet, MS, Arial Sans-serif
+Font Size: They are different for different elements.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Font Examples
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+===
 
-### Code Splitting
+Font,Style, Size, Leading, Color
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- [Futura, 'Trebuchet MS', Arial, sans-serif], normal, 24px 28px, #333333
+- [Cabin, 'Helvetica', Arial, sans-serif], normal, 15px, 17px, #5e5e5e
 
-### Analyzing the Bundle Size
+Image Dimensions  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+===
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1040 x 428
