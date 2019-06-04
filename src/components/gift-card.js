@@ -6,7 +6,7 @@ import Success from './success';
 export default class GiftCard extends Component {
 
         state = {
-            step:2,
+            step:1,
             item: {
                 id: 'gift-card',
                 amount: '',

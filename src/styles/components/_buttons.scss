@@ -49,6 +49,12 @@ input:invalid {
       padding: 1rem 1.6rem;
       text-align: center;
       text-transform: uppercase;
+      transition: all 2s ease-out;
+      &:hover {
+          background-color: $primaryGrey;
+          color: $white;
+          transition: all 2s ease;
+      }
 
   }
 
@@ -72,9 +78,9 @@ select {
     line-height: 1.3;
     margin: .8rem auto;
     margin-bottom: 2.4rem;
-    max-width: 90%; 
+    max-width: 92.5%; 
 	padding: .8rem 1.6rem;
-      width: 90%;
+      width: 92.5%;
 	
 }
 .select-css::-ms-expand {

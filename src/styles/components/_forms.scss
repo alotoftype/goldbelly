@@ -18,8 +18,21 @@
     align-content: space-around;
     align-items: center;
     margin-top: .8rem;
+    .input {
+        width: calc(100% / 2);
+
+    }
     .input:last-of-type{
         padding-top: 1.6rem;
     }
 
+}
+.confirm {
+    display: flex;
+    justify-content: center;
+    input[type="button"]{
+        margin: .8rem;
+
+     
+    }
 }

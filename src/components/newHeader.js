@@ -17,7 +17,10 @@ const Header = () => {
   </div>
   </section>
   <section className="main-nav">
-  <img src={Logo} alt="" className="logo"/>
+  <div className="logo">
+  <img src={Logo} alt="" className=""/>
+  </div>
+ 
   <nav>
     <ul>
       <li>Popular Now</li>
