@@ -7,6 +7,7 @@ import { NAME_START_CHAR } from 'xmlchars/xml/1.0/ed5';
 export default class GiftCard extends Component {
 
         state = {
+            step:1,
             item: {
                 id: 'gift-card',
                 amount: '',
@@ -20,15 +21,7 @@ export default class GiftCard extends Component {
             errors: {},
             cart: []
           }
-          handleAmount = (name, {item} = this.state) => event => {
-              event.preventDefault();
-              this.setState({
-                  item:{...item, [name] : 0}
-              })
-              this.setState({
-                  item:{...item, [name]:event.target.value}
-              })
-          }
+
           handleMatch = (name,  {item} = this.state) => event => {
               event.preventDefault()
               const { recepientsEmail, rEmail } = this.state.item
@@ -64,8 +57,10 @@ export default class GiftCard extends Component {
         </div>
         }
         return (
-            <Layout>
             <form>
+            <div className="heading">
+                Purchase a Digital GiftCard
+            </div>
                 <select name="amount" onChange={this.handleItem('amount')}>
                 <option value="choose an amount" disabled>Choose an amount</option>
                 {amounts.map((amount, index) => (
@@ -107,8 +102,6 @@ export default class GiftCard extends Component {
                     <input type="button" value="submit" onClick={this.onSubmit()} />
                 </div>
                 </form>
-                    {console.log(item)}
-            </Layout>
         )
     }
 }
