@@ -1,0 +1,25 @@
+.name, .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+        label {
+            padding-left: .8rem;
+            padding-bottom: 0;
+            font-size: 1.2rem;
+            font-weight: bold
+        }
+        input {
+            margin-top: .4rem;
+        }
+}
+.recipient,.sender {
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    margin-top: .8rem;
+    .input:last-of-type{
+        padding-top: 1.6rem;
+    }
+
+}

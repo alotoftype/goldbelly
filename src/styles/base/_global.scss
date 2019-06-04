@@ -3,6 +3,16 @@ html {
     font-size: $font-size;
 
 }
+a,
+input,
+textarea,
+button,
+label,
+iframe,
+audio,
+video {
+  touch-action: manipulation;
+}
 
 header,
 main,
@@ -35,10 +45,15 @@ footer {
     }
     
 }
+main {
+    margin: 1.6rem 0;
+    padding: .8rem;
+}
 
 footer {
     background-color: $primaryRed;
     min-height: 30rem;
 }
+
 
 

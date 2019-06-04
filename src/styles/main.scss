@@ -1,9 +1,11 @@
 @import './helpers/variables';
 @import './helpers/mixins';
-@import './helpers/util.scss';
+@import './helpers/util';
 @import './base/global';
 
 // Components 
+@import './components/buttons';
+@import './components/forms';
 @import './components/carousel';
 
 // Pages 

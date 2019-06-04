@@ -5,11 +5,13 @@ const Header = () => {
     return (
         <header>
   <section className="important-nav">
-  <ul className="left">
+  <div className="left">
+  <ul className="">
     <li><a href="/">about</a></li>
      <li> <a href="/">Corporate Gifts</a></li>
       <li><a href="/">Customer</a></li>
   </ul>
+  </div>
   <div className="promo">
     <p><a href="/">$15 Off First 3 Orders</a></p>
   </div>

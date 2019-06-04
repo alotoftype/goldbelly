@@ -4,3 +4,12 @@
     align-items: center;
     overflow: hidden
 }
+
+.form {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    @include desktop {
+        max-width: 128rem;
+    }
+}

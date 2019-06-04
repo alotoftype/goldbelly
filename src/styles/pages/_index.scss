@@ -36,10 +36,18 @@ header {
     .important-nav {
         background-color: $grey;
         display: flex;
-        align-items: center;
+        //align-items: center;
         //max-height: 3rem;
         width: 100%;
         .promo {
+            line-height: 1;
+            margin: 1.6rem 0;
+            padding:1.6rem;
+            padding-bottom:.4rem;
+            p {
+                margin: 0;
+                padding: .4rem 0;
+            }
             a {
                 color: $white;   
             }
@@ -47,9 +55,17 @@ header {
         }
     }
     .left {
+        display: block;
+        line-height: 1;
+        margin: 1.6rem 0;
         padding: 1.6rem;
         padding-bottom: .4rem;
         padding-left: .8rem;
+        ul {
+            padding: 0; 
+            padding-left: .8rem;
+            margin: 0;
+        }
         
         li{
             display: inline-block;
@@ -84,6 +100,7 @@ header {
         //color: #ff4d4f;
         fill: #ff4d4f;
         margin: 1.6rem;
+        margin-top: .8rem;
         margin-left: .8rem;
         }
 }
