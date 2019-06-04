@@ -7,8 +7,9 @@ const Gcform = (props) => {
     const amounts = ['$25','$50','$75','$100','$200','other']
 
     if(item.amount === 'other'){
-        input = <div className="other-amount">
-        <input type="text" min="1" max="500" placeholder="enter other amount"
+        input = <div className="form other-amount">
+        <label htmlFor="otherAmount">Enter Dollar Amount</label>
+        <input name="otherAmount" type="text" min="1" max="500" placeholder="enter other dollar amount"
             onChange={handleItem("Other Amount")}
         required pattern="^[0-9]*$"/>
     </div>
